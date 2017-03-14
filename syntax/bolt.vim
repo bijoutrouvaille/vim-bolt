@@ -10,7 +10,6 @@ syntax keyword boltFunction read write create update delete key index validate p
 syntax region boltString start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax region boltString start=/\v'/ skip=/\v\\./ end=/\v'/
 
-
 syntax match boltOperator "\v/"
 syntax match boltOperator "\v|"
 syntax match boltOperator "\v\!"
@@ -20,8 +19,6 @@ syntax match boltOperator "\v\!\="
 syntax match boltOperator "\v/\="
 syntax match boltOperator "\v\<\="
 syntax match boltOperator "\v\>\="
-
-
 
 highlight link boltString String
 highlight link boltConstant Constant
