@@ -9,8 +9,6 @@ syntax keyword boltType root auth now
 syntax keyword boltFunction read write create update delete key index validate prior
 syntax region boltString start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax region boltString start=/\v'/ skip=/\v\\./ end=/\v'/
-syntax match boltComment '//.*$'
-syntax region boltBlockComment start=/\v\/\*/ end=/\v\*\//
 
 
 syntax match boltOperator "\v/"
@@ -25,8 +23,6 @@ syntax match boltOperator "\v\>\="
 
 
 
-
-
 highlight link boltString String
 highlight link boltConstant Constant
 highlight link boltKeyword Keyword
@@ -36,5 +32,8 @@ highlight link boltType Type
 highlight link boltBoolean Boolean
 highlight link boltComment Comment
 highlight link boltBlockComment Comment
+
+syntax match boltComment '//.*$'
+syntax region boltBlockComment start=/\v\/\*/ end=/\v\*\//
 
 let b:current_syntax = "bolt"
